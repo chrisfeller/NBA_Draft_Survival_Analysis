@@ -7,7 +7,7 @@ In preparation for the 2020 NBA Draft, we wanted to analyze when each prospect w
 
 As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from right to left on the x-axis, we observe that based on the compiled mock drafts there is ~45% probability Edwards is available at pick number 2 and ~30% probability he is available at pick number 3.
 
-<div style="text-align:center"><img src='plots/players/Anthony_Edwards.png' width=70%></div>
+<div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=70%></div>
 
 <br>
 
@@ -59,19 +59,19 @@ In similar fashion, here are the survival curves of the consensus top-10 picks. 
 
 At this point the mock drafts have Anthony Edwards as the most likely first overall pick. There's ~45% probability he is available at the number two pick and ~30% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 5th pick.
 
-<div style="text-align:center"><img src='plots/players/Anthony_Edwards.png' width=90%></div>
+<div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=90%></div>
 
 <br>
 
 Xavier Tillman provides a good example of a player likely to go in the middle of the draft. Based on the mock drafts, he is unlikely to be selected prior to the 23rd slot. After then his probability of being available decreases at a steady rate. He is likely to be gone by pick 52.
 
-<div style="text-align:center"><img src='plots/players/Xavier_Tillman.png' width=90%></div>
+<div style="text-align:center"><img src='plots/players/xavier_tillman.png' width=90%></div>
 
 <br>
 
 Kenyon Martin Jr. is a player on the fringe of being drafted. The mock drafts have him unlikely to be selected prior to pick number 56. In total, there is ~60% probability he goes undrafted.
 
-<div style="text-align:center"><img src='plots/players/Kenyon_Martin_Jr.png' width=90%></div>
+<div style="text-align:center"><img src='plots/players/kenyon_martin_jr.png' width=90%></div>
 
 <br>
 
