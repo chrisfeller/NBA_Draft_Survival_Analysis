@@ -11,7 +11,7 @@ As an example, the following plot illustrates the probability that Anthony Edwar
 
 <br>
 
-Survival analysis is typically used to calculate the probability of death occurring at a given age for subsets of the population. In this case, I'm substituting being drafted for death and draft slot for age. The time between the start of the analysis and when the event of interest occurs is called survival time, which in this case is the number of draft slots that a player is still available in each mock draft.
+Survival analysis is typically used to calculate the probability of death occurring at a given age for subsets of the population. In this case, we've substituting being drafted for death and draft slot for age. The time between the start of the analysis and when the event of interest occurs is called survival time, which in this case is the number of draft slots that a player is still available in each mock draft.
 
 The analysis calculates probabilities for picks 1-60. Not all players were included in each mock draft and not every mock draft ranked players 1-60 with most only ranking through the first round. Since those players were never observed we've considered them right-censored. This means that we have some information about their expected selection, in most cases they were not selected picks 1-30, but not the exact slot in which the analyst had them mocked. Due to this constraint, we've used the Kaplan-Meier estimator to calculate the survival curve of each prospect.
 
