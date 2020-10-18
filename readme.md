@@ -81,8 +81,10 @@ Hopefully this analysis provides additional information for teams on when target
 
 <div style="text-align:center"><img src='plots/pg_example.png' width=90%></div>
 
-#### Next Steps
-We're working on a dashboard to provide users the ability to interactively filter to player(s).
+#### Dashboard
+To interactively filter to a specific player, visit our [dashboard](https://chrisfeller.shinyapps.io/nba_draft_survival_analysis_app/?_ga=2.67843986.2071066075.1603058532-829731406.1603058532).
+
+<div style="text-align:center"><img src='plots/dashboard_example.png' width=90%></div>
 
 #### References
 1. [Lifelines Package Documentation](https://lifelines.readthedocs.io/en/latest/index.html)
