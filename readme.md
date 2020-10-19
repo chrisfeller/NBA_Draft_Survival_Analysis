@@ -5,7 +5,7 @@
 #### Motivation
 In preparation for the 2020 NBA Draft, we wanted to analyze when each prospect was likely to be selected. Compiling 20 mock drafts from various draft analysts, we created a survival analysis which calculated the probability of each prospect being available at each draft slot.
 
-As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from right to left on the x-axis, we observe that based on the compiled mock drafts there is ~45% probability Edwards is available at pick number 2 and ~30% probability he is available at pick number 3.
+As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from left to right on the x-axis, we observe that based on the compiled mock drafts there is ~45% probability Edwards is available at pick number 2 and ~30% probability he is available at pick number 3.
 
 <div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=70%></div>
 
