@@ -1,5 +1,5 @@
 <center> <h1>NBA Draft Survival Analysis</h1> </center>
-<center> <h3>Updated October 16, 2020</h3> </center>
+<center> <h3>Updated October 19, 2020</h3> </center>
 
 ---
 #### Motivation
