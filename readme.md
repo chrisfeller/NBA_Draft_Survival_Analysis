@@ -57,7 +57,7 @@ In similar fashion, here are the survival curves of the consensus top-10 picks. 
 
 #### Case Studies
 
-At this point the mock drafts have LaMelo Ball as the most likely first overall pick just ahead of Anthony Edwards. There's ~45% probability he is available at the number two pick and ~35% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 4th pick.
+At this point the mock drafts have LaMelo Ball as the most likely first overall pick just ahead of Anthony Edwards. There's ~45% probability he is available at the number two pick and ~35% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 5th pick.
 
 <div style="text-align:center"><img src='plots/players/lamelo_ball.png' width=90%></div>
 
