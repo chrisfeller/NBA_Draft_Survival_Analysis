@@ -69,7 +69,7 @@ Xavier Tillman provides a good example of a player likely to go in the middle of
 
 <br>
 
-Kenyon Martin Jr. is a player on the fringe of being drafted. The mock drafts have him unlikely to be selected prior to pick number 56. In total, there is ~75% probability he goes undrafted.
+Kenyon Martin Jr. is a player on the fringe of being drafted. The mock drafts have him unlikely to be selected prior to pick number 55. In total, there is ~75% probability he goes undrafted.
 
 <div style="text-align:center"><img src='plots/players/kenyon_martin_jr.png' width=90%></div>
 
