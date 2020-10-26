@@ -63,7 +63,7 @@ At this point the mock drafts have LaMelo Ball as the most likely first overall 
 
 <br>
 
-Xavier Tillman provides a good example of a player likely to go in the middle of the draft. Based on the mock drafts, he is unlikely to be selected prior to the 27th pick. After then his probability of being available decreases at a steady rate.
+Xavier Tillman provides a good example of a player likely to go in the middle of the draft. Based on the mock drafts, he is unlikely to be selected prior to the 26th pick. After then his probability of being available decreases at a steady rate.
 
 <div style="text-align:center"><img src='plots/players/xavier_tillman.png' width=90%></div>
 
