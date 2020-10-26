@@ -72,7 +72,7 @@ def plot_player(player, melt_df, save=False):
     # slice to individual player
     idx = melt_df.player == player
     # get the maximum draft slot for given player for x-axis plotting purposes
-    x_max = min(60, melt_df.query("player=='{0}'".format(player))['duration'].max())
+    x_max = min(60, melt_df.query('player=="{0}"'.format(player))['duration'].max())
     # fit Kaplan-Meier survival model
     kmf.fit(melt_df.duration[idx], melt_df.observed[idx])
     # plot survival curve
@@ -237,16 +237,16 @@ if __name__=='__main__':
     # Read in individual mock drafts
     babcock_hoops_df = pd.read_csv('../data/babcock_hoops.csv')
     bryan_kalbrosky_df = pd.read_csv('../data/bryan_kalbrosky.csv')
+    chad_ford_df = pd.read_csv('../data/chad_ford.csv')
     chris_stone_df = pd.read_csv('../data/chris_stone.csv')
     danny_cunningham_df = pd.read_csv('../data/danny_cunningham.csv')
-    draft_express_df = pd.read_csv('../data/draft_express.csv')
     gary_parrish_df = pd.read_csv('../data/gary_parrish.csv')
     james_ham_df = pd.read_csv('../data/james_ham.csv')
     jeff_goodman_df = pd.read_csv('../data/jeff_goodman.csv')
     jeremy_woo_df = pd.read_csv('../data/jeremy_woo.csv')
+    jonathan_givony_df = pd.read_csv('../data/jonathan_givony.csv')
     jonathan_wasserman_df = pd.read_csv('../data/jonathan_wasserman.csv')
     kevin_oconnor_df = pd.read_csv('../data/kevin_oconnor.csv')
-    kevin_pelton_df = pd.read_csv('../data/kevin_pelton.csv')
     krysten_peek_df = pd.read_csv('../data/krysten_peek.csv')
     kyle_boone_df = pd.read_csv('../data/kyle_boone.csv')
     nbadraftnet_df = pd.read_csv('../data/nbadraftnet.csv')
@@ -257,10 +257,10 @@ if __name__=='__main__':
     tankathon_df = pd.read_csv('../data/tankathon.csv')
 
     # Pre-process individual mock drafts to match names
-    mock_draft_list = [babcock_hoops_df, bryan_kalbrosky_df, chris_stone_df,
-                       danny_cunningham_df, draft_express_df, gary_parrish_df,
+    mock_draft_list = [babcock_hoops_df, bryan_kalbrosky_df, chad_ford_df,
+                       chris_stone_df, danny_cunningham_df, gary_parrish_df,
                        james_ham_df, jeff_goodman_df, jeremy_woo_df,
-                       jonathan_wasserman_df, kevin_oconnor_df, kevin_pelton_df,
+                       jonathan_givony_df, jonathan_wasserman_df, kevin_oconnor_df,
                        krysten_peek_df, kyle_boone_df, nbadraftnet_df,
                        netscouts_df, ricky_odonnell_df, sam_veceine_df,
                        scott_gleeson_df, tankathon_df]
@@ -320,8 +320,16 @@ if __name__=='__main__':
                             on=['player', 'variable'],
                             how='inner'))
 
+    # Write out Long Form Big Board
+    melt_df.drop('variable', axis=1).to_csv('../data/big_board_long.csv',
+                                            index=False)
+
     # Plot an individual player's survival curve
-    plot_player('Anthony Edwards', melt_df, save=True)
+    plot_player('Anthony Edwards', melt_df, save=False)
+
+    # Save all player survival curves
+    for player in melt_df['player'].unique():
+        plot_player(player, melt_df, save=True)
 
     # Plot survival curves of consensus top ten picks
     plot_Consensus_top_10(big_board_df, melt_df, save=True)
