@@ -1,11 +1,11 @@
 <center> <h1>NBA Draft Survival Analysis</h1> </center>
-<center> <h3>Updated October 26, 2020</h3> </center>
+<center> <h3>Updated November 2, 2020</h3> </center>
 
 ---
 #### Motivation
 In preparation for the 2020 NBA Draft, I wanted to analyze when each prospect was likely to be selected. Compiling 20 mock drafts from various draft analysts, I created a survival analysis which calculated the probability of each prospect being available at each draft slot.
 
-As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from left to right on the x-axis, we observe that based on the compiled mock drafts there is ~55% probability Edwards is available at pick number 2 and ~40% probability he is available at pick number 3.
+As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from left to right on the x-axis, we observe that based on the compiled mock drafts there is ~55% probability Edwards is available at pick number 2 and ~35% probability he is available at pick number 3.
 
 <div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=70%></div>
 
@@ -24,7 +24,7 @@ Each player's survival curve is based on information compiled from 20 mock draft
 |---|---|---|---|
 | Babcock Hoops  | Babcock Hoops  | October 5  | [Link](https://www.babcockhoops.com/mockdraft)  |
 | Bryan Kalbrosky  | Rookie Wire  | October 22  | [Link](https://therookiewire.usatoday.com/lists/2020-nba-mock-draft-all-60-picks-post-combine/)  |
-| Chad Ford  | NBA Big Board  | October 21  | [Link](https://nbabigboard.com/)  |
+| Chad Forsberg  | NBC Sports  | October 29  | [Link](https://www.nbcsports.com/boston/celtics/2020-nba-mock-draft-90-best-players-available-fit-team-needs)  |
 | Chris Stone  | Sporting News  | March 24  | [Link](https://www.sportingnews.com/us/nba/news/nba-mock-draft-2020-warriors-pick-timberwolves-lamelo-ball/178cr8zivu85e1qdtavgxp9cc2)  |
 | Danny Cunningham  | Complex  | October 12  | [Link](https://www.complex.com/sports/nba-mock-draft-predictions-post-nba-finals/?utm_campaign=sportstw&utm_source=twitter.com&utm_medium=social)  |
 | Gary Parrish  | CBS Sports  | October 9  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
@@ -33,33 +33,33 @@ Each player's survival curve is based on information compiled from 20 mock draft
 | Jeremy Woo  | Sports Illustrated  | October 14  | [Link](https://www.si.com/nba/2020/10/14/nba-mock-draft-projections-post-finals)  |
 | Jonathan Givony  | ESPN  | August 20  | [Link](https://www.espn.com/nba/insider/story/_/id/29695731/nba-mock-draft-projected-picks-big-lottery-winners)  |
 | Jonathan Wasserman  | Bleacher Report  | October 21  | [Link](https://bleacherreport.com/articles/2914096-2020-nba-mock-draft-3-trades-that-would-turn-the-lottery-upside-down)  |
-| Kevin O'Connor  | The Ringer  | October 14  | [Link](https://nbadraft.theringer.com/)  |
+| Kevin O'Connor  | The Ringer  | October 27  | [Link](https://nbadraft.theringer.com/)  |
 | Krysten Peek  | Yahoo Sports  | October 15  | [Link](https://sports.yahoo.com/2020-nba-mock-draft-50-la-melo-moves-to-no-1-132728170.html)  |
 | Kyle Boone  | CBS Sports  | October 21  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
-| NBAdraftnet | NBAdraftnet | September 16 | [Link](https://www.nbadraft.net/nba-mock-drafts/) |
+| NBAdraftnet | NBAdraftnet | October 19 | [Link](https://www.nbadraft.net/nba-mock-drafts/) |
 | NetScouts  | NetScouts  | October 20  | [Link](https://netscoutsbasketball.com/scouting/2020-nba-mock-draft/)  |
 | Ricky O'Donnell  | SB Nation  | August 20  | [Link](https://www.sbnation.com/nba/2020/8/20/21374098/nba-mock-draft-2020-lottery-order-timberwolves-warriors-bulls)  |
 | Sam Veceine  | The Athletic  | October 13  | [Link](https://theathletic.com/2128239/2020/10/13/lamelo-ball-over-james-wiseman-at-no-1-in-2020-nba-mock-draft-version-8-0/)  |
-| Scott Gleeson  | USA Today  | August 20  | [Link](https://www.usatoday.com/story/sports/nba/draft/2020/08/20/nba-mock-draft-post-lottery-timberwolves-top-pick/3402893001/)  |
+| Scott Gleeson  | USA Today  | October 29  | [Link](https://www.usatoday.com/story/sports/college/iowa-state/cyclone-insider/2020/10/29/nba-mock-draft-lamelo-ball-anthony-edwards-first-pick-tyrese-haliburton/6068784002/)  |
 | Tankathon  | Tankathon  | October 24  | [Link](http://www.tankathon.com/mock_draft)  |
 
 #### Consensus Top-3 Picks
 
-Based on the average draft slot across all mock drafts, LaMelo Ball (1.8), Anthony Edwards (1.9), and James Wiseman (3.3) are the consensus top three picks. Their respective survival curves are plotted below. At this point in time Ball and Edwards are the heavy favorites to go in the first two picks. Wiseman is ranked substantially lower in a few mocks resulting in a low probability of him falling to the eighth pick.
+Based on the average draft slot across all mock drafts Anthony Edwards (1.9), LaMelo Ball (2.0), and James Wiseman (3.6) are the consensus top three picks. Their respective survival curves are plotted below. At this point in time Edwards and Ball are the heavy favorites to go in the first two picks. Wiseman is ranked substantially lower in a few mocks resulting in a low probability of him falling to the ninth pick.
 
 <div style="text-align:center"><img src='plots/top_3.png' width=90%></div>
 
 #### Consensus Top-10 Picks
 
-In similar fashion, here are the survival curves of the consensus top-10 picks. Three of the top ten have a non-zero chance of falling out of the lottery according to the mock drafts. One thing I have my eye on is any future movement in Devin Vassell's curve after the suspected [change to his shooting form](https://twitter.com/Joe_Casey1/status/1316803378182262784?s=20) that have [some analysts questioning their opinion of him](https://twitter.com/johnhollinger/status/1316794770220556288?s=20). There's yet to be any evidence that has occurred just yet.
+In similar fashion, here are the survival curves of the consensus top-10 picks. Three of the top ten have a non-zero chance of falling out of the lottery according to the mock drafts.
 
 <div style="text-align:center"><img src='plots/top_10.png' width=90%></div>
 
 #### Case Studies
 
-At this point the mock drafts have LaMelo Ball as the most likely first overall pick just ahead of Anthony Edwards. There's ~45% probability he is available at the number two pick and ~35% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 5th pick.
+At this point the mock drafts have Anthony Edwards as the most likely first overall pick just ahead of LaMelo Ball. There's ~55% probability he is available at the number two pick and ~35% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 4th pick.
 
-<div style="text-align:center"><img src='plots/players/lamelo_ball.png' width=90%></div>
+<div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=90%></div>
 
 <br>
 
@@ -75,7 +75,7 @@ Kenyon Martin Jr. is a player on the fringe of being drafted. The mock drafts ha
 
 <br>
 
-Hopefully this analysis provides additional information for teams on when targeted players might be available during the draft. As a final example, if you're a hypothetical team targeting a point guard outside of the lottery you can compare survival curves to better predict when a player will be available. In this case, if you value Maledon over Flynn and Terry you'll need to be more aggressive in moving up to get him as he's likely to be gone before the other two.
+Hopefully this analysis provides additional information for teams on when targeted players might be available during the draft. As a final example, if you're a hypothetical team targeting a point guard outside of the lottery you can compare survival curves to better predict when a player will be available. In this case, if you value Terry over Maledon and Flynn you'll need to be more aggressive in moving up to get him as he's likely to be gone before the other two.
 
 <br>
 
