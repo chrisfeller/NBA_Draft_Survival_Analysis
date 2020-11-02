@@ -51,7 +51,7 @@ Based on the average draft slot across all mock drafts Anthony Edwards (1.9), La
 
 #### Consensus Top-10 Picks
 
-In similar fashion, here are the survival curves of the consensus top-10 picks. Only Killian Hayes and Devin Vassell have a non-zero chance of falling out of the lottery according to the mock drafts.
+In similar fashion, here are the survival curves of the consensus top-10 picks. 
 
 <div style="text-align:center"><img src='plots/top_10.png' width=90%></div>
 
