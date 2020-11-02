@@ -22,7 +22,7 @@ Each player's survival curve is based on information compiled from 20 mock draft
 
 | Name  | Affiliation  | Updated  | Mock Draft  |
 |---|---|---|---|
-| Babcock Hoops  | Babcock Hoops  | October 5  | [Link](https://www.babcockhoops.com/mockdraft)  |
+| Babcock Hoops  | Babcock Hoops  | November 2  | [Link](https://www.babcockhoops.com/mockdraft)  |
 | Bryan Kalbrosky  | Rookie Wire  | October 22  | [Link](https://therookiewire.usatoday.com/lists/2020-nba-mock-draft-all-60-picks-post-combine/)  |
 | Chad Forsberg  | NBC Sports  | October 29  | [Link](https://www.nbcsports.com/boston/celtics/2020-nba-mock-draft-90-best-players-available-fit-team-needs)  |
 | Chris Stone  | Sporting News  | March 24  | [Link](https://www.sportingnews.com/us/nba/news/nba-mock-draft-2020-warriors-pick-timberwolves-lamelo-ball/178cr8zivu85e1qdtavgxp9cc2)  |
@@ -45,13 +45,13 @@ Each player's survival curve is based on information compiled from 20 mock draft
 
 #### Consensus Top-3 Picks
 
-Based on the average draft slot across all mock drafts Anthony Edwards (1.9), LaMelo Ball (2.0), and James Wiseman (3.6) are the consensus top three picks. Their respective survival curves are plotted below. At this point in time Edwards and Ball are the heavy favorites to go in the first two picks. Wiseman is ranked substantially lower in a few mocks resulting in a low probability of him falling to the ninth pick.
+Based on the average draft slot across all mock drafts Anthony Edwards (1.9), LaMelo Ball (2.1), and James Wiseman (3.6) are the consensus top three picks. Their respective survival curves are plotted below. At this point in time Edwards and Ball are the heavy favorites to go in the first two picks. Wiseman is ranked substantially lower in a few mocks resulting in a low probability of him falling to the ninth pick.
 
 <div style="text-align:center"><img src='plots/top_3.png' width=90%></div>
 
 #### Consensus Top-10 Picks
 
-In similar fashion, here are the survival curves of the consensus top-10 picks. Three of the top ten have a non-zero chance of falling out of the lottery according to the mock drafts.
+In similar fashion, here are the survival curves of the consensus top-10 picks. Only Killian Hayes and Devin Vassell have a non-zero chance of falling out of the lottery according to the mock drafts.
 
 <div style="text-align:center"><img src='plots/top_10.png' width=90%></div>
 
