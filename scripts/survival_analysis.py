@@ -237,6 +237,7 @@ if __name__=='__main__':
     # Read in individual mock drafts
     babcock_hoops_df = pd.read_csv('../data/babcock_hoops.csv')
     bryan_kalbrosky_df = pd.read_csv('../data/bryan_kalbrosky.csv')
+    chad_ford_df = pd.read_csv('../data/chad_ford.csv')
     chris_foresberg_df = pd.read_csv('../data/chris_foresberg.csv')
     chris_stone_df = pd.read_csv('../data/chris_stone.csv')
     danny_cunningham_df = pd.read_csv('../data/danny_cunningham.csv')
@@ -257,13 +258,13 @@ if __name__=='__main__':
     tankathon_df = pd.read_csv('../data/tankathon.csv')
 
     # Pre-process individual mock drafts to match names
-    mock_draft_list = [babcock_hoops_df, bryan_kalbrosky_df, chris_foresberg_df,
-                       chris_stone_df, danny_cunningham_df, gary_parrish_df,
-                       james_ham_df, jeff_goodman_df, jeremy_woo_df,
-                       jonathan_givony_df, jonathan_wasserman_df, kevin_oconnor_df,
-                       krysten_peek_df, kyle_boone_df, nbadraftnet_df,
-                       netscouts_df, ricky_odonnell_df, sam_veceine_df,
-                       scott_gleeson_df, tankathon_df]
+    mock_draft_list = [babcock_hoops_df, bryan_kalbrosky_df, chad_ford_df,
+                       chris_foresberg_df, chris_stone_df, danny_cunningham_df,
+                       gary_parrish_df, james_ham_df, jeff_goodman_df,
+                       jeremy_woo_df, jonathan_givony_df, jonathan_wasserman_df,
+                       kevin_oconnor_df, krysten_peek_df, kyle_boone_df,
+                       nbadraftnet_df, netscouts_df, ricky_odonnell_df,
+                       sam_veceine_df, scott_gleeson_df, tankathon_df]
 
     mock_draft_list = [pre_process_mocks(df) for df in mock_draft_list]
 
