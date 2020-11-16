@@ -1,11 +1,11 @@
 <center> <h1>NBA Draft Survival Analysis</h1> </center>
-<center> <h3>Updated November 9, 2020</h3> </center>
+<center> <h3>Updated November 16, 2020</h3> </center>
 
 ---
 #### Motivation
 In preparation for the 2020 NBA Draft, I wanted to analyze when each prospect was likely to be selected. Compiling over 20 mock drafts from various draft analysts, I created a survival analysis which calculated the probability of each prospect being available at each draft slot.
 
-As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from left to right on the x-axis, we observe that based on the compiled mock drafts there is ~60% probability Edwards is available at pick number 2 and ~35% probability he is available at pick number 3.
+As an example, the following plot illustrates the probability that Anthony Edwards is available at each draft slot. Moving from left to right on the x-axis, we observe that based on the compiled mock drafts there is ~55% probability Edwards is available at pick number 2 and ~50% probability he is available at pick number 3.
 
 <div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=70%></div>
 
@@ -24,29 +24,30 @@ Each player's survival curve is based on information compiled from over 20 mock 
 |---|---|---|---|
 | Babcock Hoops  | Babcock Hoops  | November 2  | [Link](https://www.babcockhoops.com/mockdraft)  |
 | Bryan Kalbrosky  | Rookie Wire  | October 22  | [Link](https://therookiewire.usatoday.com/lists/2020-nba-mock-draft-all-60-picks-post-combine/)  |
-| Chad Ford | NBA Big Board | November 5 | [Link](https://nbabigboard.com/mock-draft-1/) |
+| Chad Ford | NBA Big Board | November 15 | [Link](https://nbabigboard.com/mock-draft-2-0/) |
 | Chad Forsberg  | NBC Sports  | October 29  | [Link](https://www.nbcsports.com/boston/celtics/2020-nba-mock-draft-90-best-players-available-fit-team-needs)  |
 | Chris Stone  | Sporting News  | March 24  | [Link](https://www.sportingnews.com/us/nba/news/nba-mock-draft-2020-warriors-pick-timberwolves-lamelo-ball/178cr8zivu85e1qdtavgxp9cc2)  |
 | Danny Cunningham  | Complex  | November 2  | [Link](https://www.complex.com/sports/nba-mock-draft-pre-nba-draft/)  |
-| Gary Parrish  | CBS Sports  | October 9  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
-| James Ham  | NBC Sports | October 26  | [Link](https://www.nbcsports.com/bayarea/warriors/2020-nba-mock-draft-190-first-round-pick-projections-after-finals)  |
+| Gary Parrish  | CBS Sports  | November 13  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
+| James Ham  | NBC Sports | November 16  | [Link](https://www.nbcsports.com/bayarea/warriors/2020-nba-mock-draft-210-first-round-pick-projections-final-week)  |
 | Jeff Goodman  | Stadium  | August 21  | [Link](https://watchstadium.com/jeff-goodmans-2020-nba-mock-draft-3-0-lottery-order-revealed-08-20-2020/)  |
-| Jeremy Woo  | Sports Illustrated  | October 14  | [Link](https://www.si.com/nba/2020/10/14/nba-mock-draft-projections-post-finals)  |
-| Jonathan Givony  | ESPN  | August 20  | [Link](https://www.espn.com/nba/insider/story/_/id/29695731/nba-mock-draft-projected-picks-big-lottery-winners)  |
-| Jonathan Wasserman  | Bleacher Report  | November 4  | [Link](https://bleacherreport.com/articles/2915634-2020-nba-mock-draft-2-weeks-to-go-who-goes-no-1)  |
-| Kevin O'Connor  | The Ringer  | November 3 | [Link](https://nbadraft.theringer.com/)  |
+| Jeremy Woo  | Sports Illustrated  | November 16  | [Link](https://www.si.com/nba/2020/11/16/nba-mock-draft-latest-updates-rumors-daily-cover)  |
+| John Hollinger | The Athletic | November 10 | [Link](https://theathletic.com/2188482/2020/11/10/2020-nba-mock-draft-whos-going-where-in-the-first-round/) |
+| Jonathan Givony  | ESPN  | November 16  | [Link](https://www.espn.com/nba/insider/story/_/id/30286832/nba-mock-draft-our-latest-intel-most-likely-picks-trades)  |
+| Jonathan Wasserman  | Bleacher Report  | November 16  | [Link](https://bleacherreport.com/articles/2917825-bleacher-reports-final-2020-nba-mock-draft)  |
+| Kevin O'Connor  | The Ringer  | November 12 | [Link](https://nbadraft.theringer.com/)  |
 | Krysten Peek  | Yahoo Sports  | November 5  | [Link](https://sports.yahoo.com/2020-nba-mock-draft-60-la-melo-ball-remains-no-1-163601345.html)  |
-| Kyle Boone  | CBS Sports  | October 21  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
-| NBAdraftnet | NBAdraftnet | November 3 | [Link](https://www.nbadraft.net/nba-mock-drafts/) |
-| NetScouts  | NetScouts  | October 20  | [Link](https://netscoutsbasketball.com/scouting/2020-nba-mock-draft/)  |
+| Kyle Boone  | CBS Sports  | November 13  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
+| NBAdraftnet | NBAdraftnet | November 14 | [Link](https://www.nbadraft.net/nba-mock-drafts/) |
+| NetScouts  | NetScouts  | November 13  | [Link](https://netscoutsbasketball.com/scouting/2020-nba-mock-draft/)  |
 | Ricky O'Donnell  | SB Nation  | November 5  | [Link](https://www.sbnation.com/nba/2020/11/5/21546769/nba-mock-draft-2020-lamelo-ball-anthony-edwards-warriors-bulls-rumors)  |
-| Sam Veceine  | The Athletic  | October 13  | [Link](https://theathletic.com/2128239/2020/10/13/lamelo-ball-over-james-wiseman-at-no-1-in-2020-nba-mock-draft-version-8-0/)  |
-| Scott Gleeson  | USA Today  | November 5  | [Link](https://www.usatoday.com/story/sports/nba/2020/11/05/nba-mock-draft-lamelo-ball-dips-riskier-pick-anthony-edwards/6120393002/)  |
-| Tankathon  | Tankathon  | October 24  | [Link](http://www.tankathon.com/mock_draft)  |
+| Sam Veceine  | The Athletic  | November 16  | [Link](https://theathletic.com/2198283/2020/11/16/2020-nba-draft-order-mock-draft-lamelo-ball-james-wiseman-anthony-edwards-live-updates-team-fit/)  |
+| Scott Gleeson  | USA Today  | November 12  | [Link](https://www.usatoday.com/story/sports/nba/2020/11/12/nba-mock-draft-lamelo-ball-anthony-edwards-no-1-pick/6235919002/)  |
+| Tankathon  | Tankathon  | November 15  | [Link](http://www.tankathon.com/mock_draft)  |
 
 #### Consensus Top-3 Picks
 
-Based on the average draft slot across all mock drafts Anthony Edwards (1.9), LaMelo Ball (2.1), and James Wiseman (3.2) are the consensus top three picks. Their respective survival curves are plotted below. At this point in time Edwards and Ball are the heavy favorites to go in the first two picks. Wiseman is ranked substantially lower in a few mocks resulting in a low probability of him falling to the 11th pick.
+Based on the average draft slot across all mock drafts Anthony Edwards (2.04), LaMelo Ball (2.09), and James Wiseman (2.54) are the consensus top three picks. Their respective survival curves are plotted below. At this point in time Edwards and Ball are a toss up as to who goes first overall. However, Wiseman then has the highest probability of going second.
 
 <div style="text-align:center"><img src='plots/top_3.png' width=90%></div>
 
@@ -58,7 +59,7 @@ In similar fashion, here are the survival curves of the consensus top-10 picks.
 
 #### Case Studies
 
-At this point the mock drafts have Anthony Edwards as the most likely first overall pick just ahead of LaMelo Ball. There's ~60% probability he is available at the number two pick and ~35% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 4th pick.
+At this point the mock drafts have Anthony Edwards as the most likely first overall pick just ahead of LaMelo Ball. There's ~55% probability he is available at the number two pick and ~50% chance he is available at the third pick. Based on the mocks there is no chance he falls to the 4th pick.
 
 <div style="text-align:center"><img src='plots/players/anthony_edwards.png' width=90%></div>
 
@@ -70,7 +71,7 @@ Xavier Tillman provides a good example of a player likely to go in the middle of
 
 <br>
 
-Kenyon Martin Jr. is a player on the fringe of being drafted. The mock drafts have him unlikely to be selected prior to pick number 55. In total, there is ~75% probability he goes undrafted.
+Kenyon Martin Jr. is a player on the fringe of being drafted. The mock drafts have him unlikely to be selected prior to pick number 50. In total, there is ~65% probability he goes undrafted.
 
 <div style="text-align:center"><img src='plots/players/kenyon_martin_jr.png' width=90%></div>
 

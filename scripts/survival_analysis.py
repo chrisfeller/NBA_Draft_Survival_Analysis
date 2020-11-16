@@ -245,6 +245,7 @@ if __name__=='__main__':
     james_ham_df = pd.read_csv('../data/james_ham.csv')
     jeff_goodman_df = pd.read_csv('../data/jeff_goodman.csv')
     jeremy_woo_df = pd.read_csv('../data/jeremy_woo.csv')
+    john_hollinger_df = pd.read_csv('../data/john_hollinger.csv')
     jonathan_givony_df = pd.read_csv('../data/jonathan_givony.csv')
     jonathan_wasserman_df = pd.read_csv('../data/jonathan_wasserman.csv')
     kevin_oconnor_df = pd.read_csv('../data/kevin_oconnor.csv')
@@ -261,10 +262,11 @@ if __name__=='__main__':
     mock_draft_list = [babcock_hoops_df, bryan_kalbrosky_df, chad_ford_df,
                        chris_foresberg_df, chris_stone_df, danny_cunningham_df,
                        gary_parrish_df, james_ham_df, jeff_goodman_df,
-                       jeremy_woo_df, jonathan_givony_df, jonathan_wasserman_df,
-                       kevin_oconnor_df, krysten_peek_df, kyle_boone_df,
-                       nbadraftnet_df, netscouts_df, ricky_odonnell_df,
-                       sam_veceine_df, scott_gleeson_df, tankathon_df]
+                       jeremy_woo_df, john_hollinger_df, jonathan_givony_df,
+                       jonathan_wasserman_df, kevin_oconnor_df, krysten_peek_df,
+                       kyle_boone_df, nbadraftnet_df, netscouts_df,
+                       ricky_odonnell_df, sam_veceine_df, scott_gleeson_df,
+                       tankathon_df]
 
     mock_draft_list = [pre_process_mocks(df) for df in mock_draft_list]
 
