@@ -25,7 +25,7 @@ Each player's survival curve is based on information compiled from over 20 mock 
 | Babcock Hoops  | Babcock Hoops  | November 18  | [Link](https://www.babcockhoops.com/mockdraft)  |
 | Bryan Kalbrosky  | Rookie Wire  | October 22  | [Link](https://therookiewire.usatoday.com/lists/2020-nba-mock-draft-all-60-picks-post-combine/)  |
 | Chad Ford | NBA Big Board | November 18 | [Link](https://nbabigboard.com/mock-draft-3-0/) |
-| Chad Forsberg  | NBC Sports  | November 16  | [Link](https://www.nbcsports.com/boston/celtics/2020-nba-mock-draft-projecting-all-30-first-round-picks?int)  |
+| Chris Forsberg  | NBC Sports  | November 16  | [Link](https://www.nbcsports.com/boston/celtics/2020-nba-mock-draft-projecting-all-30-first-round-picks?int)  |
 | Chris Stone  | Sporting News  | March 24  | [Link](https://www.sportingnews.com/us/nba/news/nba-mock-draft-2020-warriors-pick-timberwolves-lamelo-ball/178cr8zivu85e1qdtavgxp9cc2)  |
 | Danny Cunningham  | Complex  | November 17  | [Link](https://www.complex.com/sports/nba-mock-draft-v.11/)  |
 | Gary Parrish  | CBS Sports  | November 18  | [Link](https://www.cbssports.com/nba/draft/mock-draft/)  |
