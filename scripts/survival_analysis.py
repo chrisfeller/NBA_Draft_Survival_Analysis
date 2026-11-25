@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 from functools import reduce
 import difflib
 from lifelines import KaplanMeierFitter
@@ -7,44 +6,63 @@ import matplotlib.pyplot as plt
 
 plt.style.use('fivethirtyeight')
 
-def fuzzy_name_match(x):
+def fuzzy_name_match(x, prospect_names):
     """
     Fuzzy matches a given player's names from an individual mock draft with
     the player's 'true' name in full prospect list.
 
     Args:
         x (str): an individual player's name
+        prospect_names (list): player names from the full prospect list
 
     Returns:
-        x (str): fuzzy match of input player's name from full prospect list
+        x (str): fuzzy match of input player's name from full prospect list,
+                 or None if there is no match
     """
-    # Read in prospect names
-    prospect_df = pd.read_csv('../data/prospects.csv')
-    # try to obtain fuzzy match for input player name
-    # exception returns none if there is no match
-    try:
-        return difflib.get_close_matches(x, prospect_df['player'])[0]
-    except:
-        return None
+    matches = difflib.get_close_matches(x, prospect_names)
+    return matches[0] if matches else None
 
-def pre_process_mocks(df):
+def pre_process_mocks(df, prospect_names):
     """
     Updates each player name in a given mock draft with the fuzzy match name
     from the full prospect list. Allows all mock drafts to be easily joined
     together as not all mock's follow the same naming conventions. For example,
     some mocks have Xavier Tillman Sr. and others have Xavier Tillman.
 
+    Prints every name that was not an exact match so it can be checked, drops
+    names with no match, and raises an error if two names in the same mock
+    match the same prospect.
+
     Args:
         df (pandas DataFrame): an individual mock draft
+        prospect_names (list): player names from the full prospect list
 
     Returns:
         df (pandas DataFrame): an individual mock draft with player names
                                updated to fuzzy match name from full prospect
                                list
     """
+    mock_name = [col for col in df.columns if col != 'player'][0].replace('_rank', '')
     # create fuzzy match name for each player, which will be used as join
     # column when merging with other mock drafts
-    df['fuzzy_name'] = df['player'].apply(lambda x: fuzzy_name_match(x))
+    df['fuzzy_name'] = df['player'].apply(lambda x: fuzzy_name_match(x, prospect_names))
+    # report non-exact matches so a wrong match (e.g. a prospect missing from
+    # prospects.csv being matched to a similarly named player) can be caught
+    for player, fuzzy_name in df.loc[df['player'] != df['fuzzy_name'],
+                                     ['player', 'fuzzy_name']].values:
+        if fuzzy_name is None:
+            print('{0}: no match for "{1}", dropped'.format(mock_name, player))
+        else:
+            print('{0}: matched "{1}" to "{2}"'.format(mock_name, player, fuzzy_name))
+    # two names matching the same prospect would duplicate that player's rows
+    # when the mock drafts are merged
+    dupes = df.loc[df['fuzzy_name'].notnull() & df['fuzzy_name'].duplicated(keep=False)]
+    if not dupes.empty:
+        raise ValueError('{0}: multiple names matched the same prospect:\n{1}'
+                         .format(mock_name, dupes[['player', 'fuzzy_name']].to_string()))
+    # drop unmatched names, as merging on null names would pair every
+    # unmatched name in one mock draft with every unmatched name in the next
+    df = df.dropna(subset=['fuzzy_name'])
     # drop original player name
     df = df.drop('player', axis=1)
     return df
@@ -268,13 +286,15 @@ if __name__=='__main__':
                        ricky_odonnell_df, sam_veceine_df, scott_gleeson_df,
                        tankathon_df]
 
-    mock_draft_list = [pre_process_mocks(df) for df in mock_draft_list]
+    prospect_names = pd.read_csv('../data/prospects.csv')['player'].to_list()
+    mock_draft_list = [pre_process_mocks(df, prospect_names) for df in mock_draft_list]
 
     # Join individual mock drafts using fuzzy name matching
     # Create an average rank for each player
     big_board_df = reduce(lambda x, y: pd.merge(x, y,
                                                 on='fuzzy_name',
-                                                how='outer'),
+                                                how='outer',
+                                                validate='one_to_one'),
                                                 mock_draft_list)
     big_board_df = (big_board_df.rename({'fuzzy_name': 'player'},
                                         axis=1)
@@ -290,20 +310,19 @@ if __name__=='__main__':
     big_board_df.to_csv('../data/big_board.csv',
                         index=False)
 
-    # Fill nulls with max draft slot +1 for each respective mock draft
-    # This indicates the next possible draft slot a player might have gone
-    # and will be censored as zero in the survival model
-    rank_cols =[col for col in big_board_df.columns if col not in ['player', 'avg_rank']]
-    big_board_df[rank_cols] = big_board_df[rank_cols].fillna(big_board_df[rank_cols].max() + 1,
-                                                             downcast='infer')
-
     # Create observed flag to deal with censoring as not all mocks have ranked
-    # up to draft slot 60
-    mock_draft_name_list = [x.replace('_rank', '') for x in rank_cols if x != 'avg_rank']
+    # up to draft slot 60: 1 if the player is in the mock draft, 0 (censored)
+    # if not. Must be created before the nulls are filled below.
+    rank_cols =[col for col in big_board_df.columns if col not in ['player', 'avg_rank']]
+    mock_draft_name_list = [x.replace('_rank', '') for x in rank_cols]
     observed_col_names = ['{0}_observed'.format(mock_draft) for mock_draft in mock_draft_name_list]
-    rank_col_names = ['{0}_rank'.format(x) for x in mock_draft_name_list]
-    big_board_df[observed_col_names] = big_board_df[rank_col_names].apply(lambda x: np.where(x<=x.max()-1, 1, 0))
+    big_board_df[observed_col_names] = big_board_df[rank_cols].notnull().astype(int).to_numpy()
     observed_cols = [col for col in big_board_df.columns if '_observed' in col]
+
+    # Fill nulls with the last draft slot of each respective mock draft
+    # A player missing from a mock draft is only known to have not been
+    # selected through that slot, so he is censored there (not one slot later)
+    big_board_df[rank_cols] = big_board_df[rank_cols].fillna(big_board_df[rank_cols].max()).astype(int)
 
     # Transform wide big board into long form
     melt_1 = (pd.melt(big_board_df,
